@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LogoRemakeFour</title>
+  <meta name="description" content="Hello, LogoRemakeFour!">
+  <meta name="google-site-verification" content="UCiYLS_dQpqJmhLEhelnBHew">
+  <link rel="canonical" href="https://logoremakefourlrf.github.io/home">
+  <link rel="icon" href="https://logoremakefourwtl.github.io/lrfeditor/favicon.png">
+  <link rel="shortcut icon" href="https://logoremakefourwtl.github.io/lrfeditor/favicon.png">
+  <link rel="apple-touch-icon" href="https://logoremakefourwtl.github.io/lrfeditor/apple-touch-icon.png">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17233c;
+      --muted: #64718a;
+      --brand: #345cf0;
+      --brand-dark: #233fc0;
+      --surface: #fff;
+      --wash: #f3f6ff;
+      --line: #e1e7f2;
+      --radius: 18px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: #f8faff; line-height: 1.6; }
+    a { color: var(--brand-dark); }
+    button, input, select, textarea { font: inherit; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    header { background: var(--surface); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 800; }
+    .logo img { width: 44px; height: 44px; object-fit: contain; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    nav a { text-decoration: none; font-weight: 650; color: #43516c; }
+    nav a:hover, nav a:focus-visible { color: var(--brand); }
+    main { padding-block: 34px 60px; }
+    .hero { display: grid; grid-template-columns: 1.35fr .65fr; gap: 28px; align-items: center; padding: clamp(28px, 6vw, 68px); border-radius: 28px; color: white; background: linear-gradient(130deg, #253eb8, #426df8 60%, #8aa8ff); overflow: hidden; }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(2.2rem, 6vw, 4.3rem); line-height: 1.08; }
+    .hero p { max-width: 640px; margin: 0 0 24px; color: #edf1ff; font-size: 1.1rem; }
+    .hero img { width: min(100%, 220px); justify-self: center; filter: drop-shadow(0 14px 20px #152b7544); animation: float 4s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(12px); } }
+    .button { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 999px; padding: 11px 18px; background: var(--brand); color: white; text-decoration: none; font-weight: 750; cursor: pointer; }
+    .hero .button { background: white; color: var(--brand-dark); }
+    .button:hover { filter: brightness(.95); }
+    section { margin-top: 30px; }
+    .section-heading { margin: 0 0 14px; font-size: 1.55rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { padding: 23px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 8px 24px #1c37620a; }
+    .card h3 { margin: 0 0 8px; }
+    .muted, .hint { color: var(--muted); }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .field { display: grid; gap: 6px; margin-block: 12px; }
+    input, select, textarea { width: 100%; padding: 11px 12px; border: 1px solid #cbd4e4; border-radius: 10px; background: white; color: var(--ink); }
+    textarea { min-height: 120px; resize: vertical; }
+    .wiki-result { min-height: 92px; margin-top: 14px; padding: 14px; border-radius: 12px; background: var(--wash); }
+    .wiki-links { display: flex; flex-wrap: wrap; gap: 9px; }
+    .wiki-links a { padding: 7px 11px; border-radius: 999px; background: var(--wash); text-decoration: none; }
+    .status { padding: 12px; border-radius: 10px; background: #fff7df; color: #674d00; }
+    .portfolio { display: flex; align-items: center; gap: 18px; }
+    .portfolio img { width: 86px; height: 86px; object-fit: contain; }
+    .map { width: 100%; min-height: 320px; border: 0; border-radius: 14px; }
+    footer { padding-block: 30px; background: #17233c; color: #e9edfa; }
+    footer a { color: #cbd6ff; }
+    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+    .whatsapp { position: fixed; right: 20px; bottom: 20px; z-index: 5; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; background: #20c56a; color: white; text-decoration: none; font-size: 28px; box-shadow: 0 6px 20px #0003; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding-block: 14px; gap: 10px; }
+      nav { gap: 8px 14px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero img { width: 120px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="https://logoremakefourlrf.github.io/home" aria-label="LogoRemakeFour home">
+        <img src="https://logoremakefourwtl.github.io/lrfeditor/logo.png" alt="LogoRemakeFour logo">
+        <span>LogoRemakeFour</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="https://logoremakefourlrf.github.io/home">Home</a>
+        <a href="https://logoremakefourlrf.github.io/about">About</a>
+        <a href="https://logoremakefourwtl.github.io/mediacenter">Media Center</a>
+        <a href="https://grid.asterics.eu/#grid">AsTeRICS Grid</a>
+        <a href="https://logoremakefourlrf.github.io/tools">Tools</a>
+        <a href="https://logoremakefourlrf.github.io/computer-emulator">Computer Emulator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="welcome-title">
+      <div>
+        <h1 id="welcome-title">Hello, LogoRemakeFour!</h1>
+        <p>Explore LogoRemakeFour, discover useful tools, and find information on Wikipedia.</p>
+        <a class="button" href="https://www.example.com">Click to example Lorem Ipsum</a>
+      </div>
+      <img src="https://logoremakefourwtl.github.io/lrfeditor/logo.png" alt="" aria-hidden="true">
+    </section>
+
+    <section aria-labelledby="wiki-heading">
+      <h2 class="section-heading" id="wiki-heading">Wikipedia</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Search Wikipedia</h3>
+          <p class="muted">Choose a language and enter a topic to open its Wikipedia search results.</p>
+          <form id="wiki-form">
+            <label class="field">Language
+              <select id="wiki-language">
+                <option value="en">English</option>
+                <option value="es">Spanish (Español)</option>
+                <option value="pt">Portuguese (Português)</option>
+                <option value="ru">Russian Federation (Русский)</option>
+                <option value="de">German Deutschland (Deutsch)</option>
+              </select>
+            </label>
+            <label class="field">Search query
+              <input id="wiki-query" type="search" placeholder="Enter a Wikipedia topic" required>
+            </label>
+            <button class="button" type="submit">Search Wikipedia</button>
+          </form>
+          <div class="wiki-result" id="wiki-result" aria-live="polite">
+            Search for a topic to see its Wikipedia page link.
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Recommended and trending</h3>
+          <p class="muted">Explore these suggested Wikipedia topics.</p>
+          <div class="wiki-links">
+            <a href="https://en.wikipedia.org/wiki/Logo">Logo</a>
+            <a href="https://en.wikipedia.org/wiki/Information">Information</a>
+            <a href="https://en.wikipedia.org/wiki/Media">Media</a>
+            <a href="https://en.wikipedia.org/wiki/Technology">Technology</a>
+          </div>
+          <div class="wiki-result">
+            <strong>Wikipedia motion information</strong>
+            <p class="muted">Choose a topic above to view its page, image, poster, title, and information on Wikipedia.</p>
+            <time id="clock"></time>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Account and portfolio">
+      <article class="card">
+        <h2 class="section-heading">Account access</h2>
+        <p class="status">Sign-in and identity verification are not configured on this demo page. No password or identity-card photo is requested or collected.</p>
+        <a href="https://logoremakefourlrf.github.io/about">Learn about LogoRemakeFour</a>
+      </article>
+      <article class="card">
+        <h2 class="section-heading">Portfolio</h2>
+        <div class="portfolio">
+          <img src="https://logoremakefour8.github.io/lrfeditor/img/50%20Coins.png" alt="50 Coins">
+          <div>
+            <h3>LogoRemakeFour Portfolio</h3>
+            <p class="muted">Explore the portfolio and featured work.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid" aria-label="Contact and location">
+      <article class="card">
+        <h2 class="section-heading">Contact Us</h2>
+        <p class="muted">This sample form is front-end only and does not send or store your information.</p>
+        <form id="contact-form">
+          <label class="field">Name<input name="name" autocomplete="name" required></label>
+          <label class="field">Email<input name="email" type="email" autocomplete="email" required></label>
+          <label class="field">Phone Number
+            <div class="row">
+              <select aria-label="Country calling code" style="max-width: 170px">
+                <option value="+1">🇺🇸 United States (+1)</option>
+                <option value="+44">🇬🇧 United Kingdom (+44)</option>
+                <option value="+56">🇨🇱 Chile (+56)</option>
+                <option value="+55">🇧🇷 Brazil (+55)</option>
+                <option value="+54">🇦🇷 Argentina (+54)</option>
+                <option value="+49">🇩🇪 Germany (+49)</option>
+              </select>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="Phone number">
+            </div>
+          </label>
+          <label class="field">Message<textarea name="message" required></textarea></label>
+          <p class="hint">hCaptcha is not configured. Verification must be set up and validated on a server before enabling submissions.</p>
+          <button class="button" type="submit">Send</button>
+          <p id="contact-status" class="hint" aria-live="polite"></p>
+        </form>
+      </article>
+
+      <article class="card">
+        <h2 class="section-heading">Location</h2>
+        <p>2110 South Los Angeles Street, Los Angeles, CA 90011, USA</p>
+        <iframe class="map"
+          title="Map showing 2110 South Los Angeles Street, Los Angeles"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=2110%20South%20Los%20Angeles%20Street%2C%20Los%20Angeles%2C%20CA%2090011%2C%20USA&output=embed">
+        </iframe>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&amp;destination=2110+South+Los+Angeles+Street%2C+Los+Angeles%2C+CA+90011%2C+USA">How to arrive: 2110 South Los Angeles Street, Los Angeles, CA 90011, USA</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>©2026 LogoRemakeFour. All Rights Reserved.</span>
+      <a href="https://logoremakefourlrf.github.io/about">About LogoRemakeFour</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp"
+     href="https://wa.me/+447472137407?text=Hello%2C%20LogoRemakeFour%21"
+     aria-label="Chat with WhatsApp"
+     title="Chat with WhatsApp">☏</a>
+
+  <script>
+    const wikiDomains = { en: "org", es: "org", pt: "org", ru: "org", de: "de" };
+
+    document.getElementById("wiki-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const language = document.getElementById("wiki-language").value;
+      const query = document.getElementById("wiki-query").value.trim();
+      if (!query) return;
+
+      const url = `https://${language}.wikipedia.${wikiDomains[language]}/wiki/Special:Search?search=${encodeURIComponent(query)}`;
+      const result = document.getElementById("wiki-result");
+      result.replaceChildren();
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = `Search Wikipedia for “${query}”`;
+      result.append(link);
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("contact-status").textContent =
+        "Demo only: your information was not sent or stored.";
+    });
+
+    function updateClock() {
+      document.getElementById("clock").textContent =
+        new Intl.DateTimeFormat("en", { dateStyle: "long", timeStyle: "medium" }).format(new Date());
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
