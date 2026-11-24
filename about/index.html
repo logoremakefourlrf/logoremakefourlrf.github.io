@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About LogoRemakeFour.">
+  <title>About | LogoRemakeFour</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202124;
+      background: #f5f6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header-inner,
+    main,
+    footer {
+      width: min(100% - 2rem, 1100px);
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo img {
+      display: block;
+      width: 180px;
+      max-height: 56px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    nav a {
+      color: #30343b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #635bdb;
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding-block: 4rem;
+    }
+
+    .about-card {
+      max-width: 760px;
+      margin-inline: auto;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgb(22 28 45 / 7%);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .about-card p {
+      color: #555b66;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.85rem 1.2rem;
+      border-radius: 8px;
+      background: #635bdb;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #4e46c6;
+    }
+
+    footer {
+      padding-block: 1.5rem;
+      color: #5c626d;
+      text-align: center;
+    }
+
+    .footer-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.65rem 1rem;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-card img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .footer-card strong {
+      color: #30343b;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 1rem;
+      }
+
+      nav {
+        gap: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo"
+         href="https://logoremakefourlrf.github.io/home"
+         aria-label="LogoRemakeFour home">
+        <img src="https://logoremakefourwtl.github.io/lrfeditor/logo.png"
+             alt="LogoRemakeFour">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="https://logoremakefourlrf.github.io">Home</a>
+        <a href="https://logoremakefourlrf.github.io/about" aria-current="page">About</a>
+        <a href="https://logoremakefourwtl.github.io/mediacenter">Media Center</a>
+        <a href="https://grid.asterics.eu/#grid">AsTeRICS Grid / Asterics AAC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-card" aria-labelledby="about-title">
+      <h1 id="about-title">The repository the want to GitHub to Run Editing or Creating</h1>
+      <p>Learn more about LogoRemakeFour and its GitHub repository.</p>
+      <a class="button"
+         href="https://github.com/logoremakefourlrf/logoremakefourlrf.github.io"
+         target="_blank"
+         rel="noopener noreferrer">
+        LogoRemakeFour on GitHub
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-card" href="https://logoremakefourlrf.github.io/about">
+      <img src="https://logoremakefour8.github.io/lrfeditor/img/50%20Coins.png"
+           alt="">
+      <strong>About</strong>
+    </a>
+    <p>©2026 LogoRemakeFour. All Rights Reserved</p>
+  </footer>
+</body>
+</html>
